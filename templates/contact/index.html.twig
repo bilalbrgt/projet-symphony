@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contactez nous !{% endblock %}
+
+{% block body %}
+    <div id="bcontact">
+        <div class="contact">
+            {{ form_start(form, {"attr": {"class": 'form', "id": 'form1'} }) }}
+                <div id="form-main">
+                    <div id="form-div">
+                        <div class="name">
+                            {{ form_errors(form.name) }}
+                            {{ form_widget(form.name, {"attr": {"id": 'name'}}) }}{{ form_errors(form.name) }}
+                            {{ form_help(form.name) }}
+                        </div>
+                        <div class="email">
+                            {{ form_errors(form.email) }}
+                            {{ form_widget(form.email, {"attr": {"id": 'email'}}) }}
+                            {{ form_help(form.email) }}
+                        </div>
+                        <div class="text">
+                            {{ form_errors(form.comment) }}
+                            {{ form_widget(form.comment, {"attr": {"id": 'text'}}) }}
+                            {{ form_help(form.comment) }}
+                        </div>
+                        <div class="submit">
+                        <input type="submit " id="button-blue" value="Créer la session" class="btnSubmit">
+                        <div class="ease"></div>
+                    </div>
+                    </div>
+                </div>
+            {{ form_end(form) }}
+            <iframe  class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2633.502724574082!2d1.84552626577489!3d48.69587142008986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e42765df2f01ed%3A0x6a5c14be8b10d1af!2s78610+Le+Perray-en-Yvelines!5e0!3m2!1sfr!2sfr!4v1554209059643!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+{% endblock %}
